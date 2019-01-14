@@ -1,0 +1,16 @@
+﻿@model Books.Models.AuthorBookDTO
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>@Model.Book.Title</h4>
+    <hr />
+    @Html.Partial("_AuthorsPartial", Model.Authors)
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
